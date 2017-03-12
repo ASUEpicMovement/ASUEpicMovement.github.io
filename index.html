@@ -237,6 +237,21 @@
                 }
                 ]
         });
+        //box to show building, probably unnecessary
+        var rectangle = new google.maps.Rectangle({
+          strokeColor: '#C0C0C0',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#C0C0C0',
+          fillOpacity: 0.35,
+          map: map,
+          bounds: {
+            north: 33.418250,
+            south: 33.417850,
+            east: -111.936920,
+            west: -111.937580
+          }
+          });
 
 
                 // Try HTML5 geolocation.
