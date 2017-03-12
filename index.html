@@ -66,7 +66,7 @@
                             <a class="page-scroll" href="#facebook">Facebook</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#contact">Contact</a>
+                            <a class="page-scroll" href="#contact">Announcements</a>
                         </li>
                     </ul>
                 </div>
@@ -240,18 +240,24 @@
                 var contentString = '<div id="content">'+
                   '<div id="siteNotice">'+
                   '</div>'+
-                  '<h1 id="firstHeading" class="firstHeading">ASU Epic</h1>'+
+                  '<h1 id="firstHeading" class="firstHeading"><font color="black">ASU Epic</font></h1>'+
                   '<div id="bodyContent">'+
-                        '<p><b>We are here</b></p>'+
-                        '<p>EDC320</p>'+
+                        '<p><b><font color="black">We are here</font></b></p>'+
+                        '<p><font color="black">EDC320</font></p>'+
                   '</div>';
-                var infowindow = new google.maps.InfoWindow({content: contentString});
+                var infowindow = new google.maps.InfoWindow({
+                  content: contentString
+                });
 
                 var marker = new google.maps.Marker({
                         position: EDC320,
                         map: map,
-                        title: 'EDC320',
+                        title: 'EDC320'
                       });
+                marker.addListener('click', function() {
+                        infowindow.open(map, marker);
+                      });
+
         }
         </script>
 
